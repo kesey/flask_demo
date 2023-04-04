@@ -11,7 +11,7 @@ def index():
     + '<p>&copy; <a href="' + url_for('about') + '">SmartRooster</a></p>'
     + '</body></html>' )
 
-@app.route('/about.html')
+@app.route('/about')
 def about():
     return ('<html><head><title>WakeKill</title></head>'
     + '<body><h1>SmartRooster - About us</h1>'
@@ -28,6 +28,10 @@ def show_user_profile(username):
 @app.route('/post/<int:post_id>')
 def show_post(post_id):
     return "Post number %d" % post_id
+
+@app.route('/login')
+def login():
+    return '<a href="' + url_for('login', next='/') + '">login next<a/>'
 
 if __name__== '__main__':
     app.run(debug=True)
