@@ -18,6 +18,7 @@ def about():
     + '<p>This group if composed by the greatest sleepers in the class.</p>'
     + '<p>If it wakes us up, you may bet it&apos;ll work for you, too.</p>'
     + '<h2>Try our <a href="'+ url_for('index')+'">WakeKill</a> project</h2>'
+    + '<h2>go to user <a href="'+ url_for('show_user_profile', username='Douggy')+'">user</a> profile</h2>'
     + '</body></html>' )
 
 @app.route('/user/<username>')
